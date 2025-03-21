@@ -2,6 +2,13 @@ import 'server-only';
 import { CardWithForm } from '@/app/_components/Card/Card';
 
 //* Type Caching => [Request Memoization , Data Cache, Full Route Cache , Router Cache]
+
+//& JSDoc for formal
+/**
+ * Return `Data` categories in server
+ * @param لوفيه
+ * @returns Data
+ */
 export default async function CategoriesList() {
   const response = await fetch(`${process.env.API!}/categories?limit=100`, {
     // cache: 'no-store',
