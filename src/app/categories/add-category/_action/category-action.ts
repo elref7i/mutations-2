@@ -17,8 +17,8 @@ export async function addCategory(formData: FormData) {
   );
 
   const payload = await response.json();
-  //* بتجبر اى حد وبتغلى اى حاجه
-  //* revalidatePath('/categories');
+  //*  Request memo بتجبر اى حد وبتغلى اى حاجه ماعدا
+  // * revalidatePath('/categories');
   //* revalidateTag('/categorie');
 
   console.log(payload);
