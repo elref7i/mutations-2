@@ -1,4 +1,8 @@
 'use server';
+
+//^ Server Action => run in server => execute in client (Put,Delete,Update,POST)
+// import { revalidatePath, revalidateTag } from 'next/cache';
+
 export async function addCategory(formData: FormData) {
   const response = await fetch(
     'https://flower.elevateegy.com/api/v1/categories',
@@ -13,5 +17,9 @@ export async function addCategory(formData: FormData) {
   );
 
   const payload = await response.json();
+  //* بتجبر اى حد وبتغلى اى حاجه
+  //* revalidatePath('/categories');
+  //* revalidateTag('/categorie');
+
   console.log(payload);
 }
